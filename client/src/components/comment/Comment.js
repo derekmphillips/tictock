@@ -67,8 +67,8 @@ class Comment extends Component {
       <div style={ style.comment }>
         <h2 style={{textAlign: 'center'}}>{this.props.author+" : "+new Date(this.props.dateCompleted).toDateString()}</h2>
         {this.props.children}
-        <a style={ style.updateLink } href='#' onClick={ this.updateComment }>update</a>
-        <a style={ style.deleteLink } href='#' onClick={ this.deleteComment }>delete</a>
+        <a style={ style.updateLink } href='#' onClick={ this.updateComment }>Update</a>
+        <a style={ style.deleteLink } href='#' onClick={ this.deleteComment }>Delete</a>
         { (this.state.toBeUpdated)
           ? (<form onSubmit={ this.handleCommentUpdate }>
               <input

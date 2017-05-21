@@ -4,6 +4,7 @@ body {
 }
 
 a {
+  font-family: serif;
   color: #00bcd4;
   font-weight: bold;
   text-decoration: none;
@@ -19,8 +20,8 @@ a:hover {
 }
 
 .top-bar {
-  padding: 10px 15px;
-  margin-bottom: 50px;
+  width: 95%;
+  margin: 15px auto;
 }
 .top-bar::after {
   content: '';
@@ -39,11 +40,15 @@ a:hover {
 
 .top-bar a,
 .nav a {
-  margin: 0 8px;
+  
+}
+
+.top-bar-right a {
+	padding-right:5px;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 60px auto;
   text-align: center;
   width: 700px;
 }

@@ -28,7 +28,7 @@ class CommentList extends Component {
           onCommentDelete={ this.props.onCommentDelete }
           onCommentUpdate={ this.props.onCommentUpdate }
           key={ comment['_id'] }>
-        <Table>
+        <Table style={{border:'1px solid rgb(214, 209, 209)'  }}>
           <TableHeader>
             <TableRow>
               <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>

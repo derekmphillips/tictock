@@ -1,6 +1,6 @@
 const style = {
   commentBox: {
-    width:'80vw',
+    width:'95%',
     margin:'0 auto',
     fontFamily:'Helvetica, sans-serif'
   },
@@ -12,10 +12,9 @@ const style = {
     border:'1px solid #f1f1f1',
     padding:'0 12px',
     maxHeight:'70vh',
-    overflow:'scroll'
+    overflowY:'scroll'
   },
-  comment: {
-    backgroundColor:'#fafafa',
+  comment: {   
     margin:'10px',
     padding:'3px 10px',
     fontSize:'.85rem'
@@ -92,13 +91,14 @@ const style = {
   updateLink: {
     textDecoration:'none',
     paddingRight:'15px',
-    fontSize:'.7rem'
+    fontSize:'.7rem',
+	color: '#00bcd4'
   },
   deleteLink: {
     textDecoration:'none',
     paddingRight:'15px',
     fontSize:'.7rem',
-    color:'red'
+    color:'#b16666'
   }
 }
 

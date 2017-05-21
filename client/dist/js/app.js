@@ -30043,11 +30043,14 @@
 
 	var emptyFunction = __webpack_require__(12);
 	var invariant = __webpack_require__(8);
+	var ReactPropTypesSecret = __webpack_require__(32);
 
 	module.exports = function() {
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-	  function shim() {
+	  function shim(props, propName, componentName, location, propFullName, secret) {
+	    if (secret === ReactPropTypesSecret) {
+	      // It is still safe when called from React.
+	      return;
+	    }
 	    invariant(
 	      false,
 	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
@@ -30059,6 +30062,8 @@
 	  function getShim() {
 	    return shim;
 	  };
+	  // Important!
+	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
 	  var ReactPropTypes = {
 	    array: shim,
 	    bool: shim,
@@ -46061,7 +46066,7 @@
 	            key: comment['_id'] },
 	          _react2.default.createElement(
 	            _Table.Table,
-	            null,
+	            { style: { border: '1px solid rgb(214, 209, 209)' } },
 	            _react2.default.createElement(
 	              _Table.TableHeader,
 	              null,
@@ -65401,12 +65406,12 @@
 	        _react2.default.createElement(
 	          'a',
 	          { style: _style2.default.updateLink, href: '#', onClick: this.updateComment },
-	          'update'
+	          'Update'
 	        ),
 	        _react2.default.createElement(
 	          'a',
 	          { style: _style2.default.deleteLink, href: '#', onClick: this.deleteComment },
-	          'delete'
+	          'Delete'
 	        ),
 	        this.state.toBeUpdated ? _react2.default.createElement(
 	          'form',
@@ -65445,7 +65450,7 @@
 
 	var style = {
 	  commentBox: {
-	    width: '80vw',
+	    width: '95%',
 	    margin: '0 auto',
 	    fontFamily: 'Helvetica, sans-serif'
 	  },
@@ -65457,10 +65462,9 @@
 	    border: '1px solid #f1f1f1',
 	    padding: '0 12px',
 	    maxHeight: '70vh',
-	    overflow: 'scroll'
+	    overflowY: 'scroll'
 	  },
 	  comment: {
-	    backgroundColor: '#fafafa',
 	    margin: '10px',
 	    padding: '3px 10px',
 	    fontSize: '.85rem'
@@ -65537,13 +65541,14 @@
 	  updateLink: {
 	    textDecoration: 'none',
 	    paddingRight: '15px',
-	    fontSize: '.7rem'
+	    fontSize: '.7rem',
+	    color: '#00bcd4'
 	  },
 	  deleteLink: {
 	    textDecoration: 'none',
 	    paddingRight: '15px',
 	    fontSize: '.7rem',
-	    color: 'red'
+	    color: '#b16666'
 	  }
 	};
 

@@ -71,7 +71,7 @@ class CommentBox extends Component {
     render() {
         return ( <div style={ style.commentBox }>
         <Tabs
-            value={this.state.tabValue}
+            value={this.state.tabValue}	
             onChange={this.handleTabChange} >
           <Tab label="Project List" value={1}>
             <CommentList 

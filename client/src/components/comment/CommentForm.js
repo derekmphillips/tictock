@@ -118,7 +118,7 @@ class CommentForm extends Component {
           onChange={this.handleChange}
           style={ style.commentFormSelect}
         >
-          <MenuItem value={1} primaryText="Organization 1" />
+          <MenuItem value={1} primaryText="Democratic Senatorial Campaign Committee" />
           <MenuItem value={2} primaryText="Organization 2" />
           <MenuItem value={3} primaryText="Organization 3" />
           <MenuItem value={4} primaryText="Organization 4" />
@@ -132,7 +132,7 @@ class CommentForm extends Component {
           style={ style.commentFormSelect}
         >
           <MenuItem value={1} primaryText="OrganizationNS 1" />
-          <MenuItem value={2} primaryText="OrganizationNS 2" />
+          <MenuItem value={2} primaryText="Donald Trump 2020" />
           <MenuItem value={3} primaryText="OrganizationNS 3" />
           <MenuItem value={4} primaryText="OrganizationNS 4" />
           <MenuItem value={5} primaryText="OrganizationNS 5" />
